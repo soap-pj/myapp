@@ -18,6 +18,115 @@ $dark:                            #444 !default;
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 
+
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
+
+//color definition
+$orange: #ff894f;
+$dark:   #1F2024;
+$purple: #433D77;
+$blue:   #003466;
+$mint:   #62E5A4;
+$white:  #fff;
+
+h2{
+	color: $white !important;
+}
+
+////////////////////page2.html
+/////////////////////////////////////////////////
+
+.item-thumbnail-left{
+	border-radius: 8px;
+	height: 245px;
+	margin: 5%;
+	background-color: $purple;	
+	padding: 9%;
+	vertical-align: middle;
+
+	div{
+		width: 100%;
+		height: 20%;
+		background-color: rgba(0,0,0,0);
+		display: table-cell; 
+        text-align:center; 
+        vertical-align:middle;
+
+		img{
+			position: initial;
+		    max-height: 50px !important;
+		    max-width: 50px !important;
+		}
+	}	
+
+	h2{
+		
+		font-weight: bold;
+		font-size: 30px;
+		display: block;
+		white-space: pre-wrap;
+		margin: 20px 0 0 0;
+		padding: 0;
+	}
+
+}
+
+#page2-list-item5{
+		background-color: $mint;
+}
+
+////////////////////page6.html
+/////////////////////////////////////////////////
+#page6{
+	.item-avatar{
+		width: 50.5%;
+		height: 180px;
+	    margin: 0 -2px;
+	    background-color: #ff894f;
+	    border: none;
+	    padding: 5%;
+    	display: inline-block;
+    	text-align: center;
+
+    	img{
+		position: static;
+		margin: 20px 0;
+	    min-width: 60px;
+	    min-height: 60px;
+	}
+		
+	}
+	#page6-list-item7{
+		background-color: $blue;
+	}
+	#page6-list-item9{
+		background-color: $mint;
+	}
+	#page6-list-item10{
+		background-color: $purple;
+	}
+	#page6-list-item12{
+		background-color: $dark;
+	}
+}
+
+
+////////////////////page6.html
+/////////////////////////////////////////////////
+#page5-list-item15{
+	background-color:$blue;
+}
+#page5-list-item23{
+	background-color:$mint;
+}
+#page5-list-item29{
+	background-color:$dark;
+}
+#page5-list-item19{
+	background-color:$orange;
+}
+strong{
+	    float: right;
+}
 
