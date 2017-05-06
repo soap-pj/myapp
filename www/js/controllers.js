@@ -13,6 +13,8 @@ function ($scope, $stateParams) {
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
 function ($scope, $stateParams, $rootScope, MyState) {
+  $scope.current_card_index = 0;
+
   $scope.$on('$ionicView.enter', function () {
     if (MyState.get('beingAddingService') === true && MyState.get('from') === 'MAKE') {
     }
@@ -20,7 +22,10 @@ function ($scope, $stateParams, $rootScope, MyState) {
 
   $scope.$on('$ionicNavView.leave', function () {
     MyState.set('from', 'STORE');
-    MyState.set('card', _.cloneDeep({title: '提问', imgSrc: 'img/text.png', avatarBgColor: '#ff894f', hint: '输入问题'}));
+    MyState.set('card', _.cloneDeep(MyState.cards[$scope.current_card_index]));
+    if ($scope.current_card_index + 1 <= MyState.cards.length-1) {
+      $scope.current_card_index += 1;
+    }
   });
 
 }])
@@ -29,12 +34,7 @@ function ($scope, $stateParams, $rootScope, MyState) {
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
 function ($scope, $stateParams, $rootScope, MyState) {
-  $scope.cards = [
-    // {title: '提问', imgSrc: 'img/text.png', avatarBgColor: '#ff894f', hint: '输入问题'},
-    // {title: '豆瓣电影评分', imgSrc: 'img/douban.png', avatarBgColor: '#003466', description: '从豆瓣得到电影信息', hint: '选择信息关键词', choices: ['评分', '影片名称', '上映时间']},
-    // {title: '猫眼电影评分', imgSrc: 'img/maoyan.png', avatarBgColor: '#62E5A4', description: '从猫眼得到电影信息', hint: '选择信息关键词', choices: ['评分', '影片名称', '上映时间']},
-    // {title: '计算', imgSrc: 'img/star.png', avatarBgColor: '#1F2024', hint: '请选择计算公式', choices: ['平均值', '众数', '中位数', '方差', '标准差']}
-  ];
+  $scope.cards = [];
 
 
   $scope.$on('$ionicView.enter', function () {
@@ -55,7 +55,11 @@ function ($scope, $stateParams, $rootScope, MyState) {
   };
 
   $scope.run_service = function () {
-    alert('hello');
+    //TODO: it's just a test, please re-implement it
+    MyState.cards[0].run().then(function (places) {
+      $scope.testSoapResult = _.map(places, (p) => {return p.name;});
+
+    });
   }
 
 }])

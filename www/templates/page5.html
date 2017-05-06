@@ -8,6 +8,12 @@
   <ion-content padding="true" class="has-header">
 
     <my-card value="card" ng-repeat="card in cards" ></my-card>
+
+    <!--TODO: below is just a test for soap result, please delete it after validation -->
+    <ul ng-if="testSoapResult !== undefined">
+      <li ng-repeat="result in testSoapResult">{{ result }}</li>
+    </ul>
+
     <a ng-click="addService()" ui-sref="tabsController.page6" id="page5-button2" class="button button-positive  button-block">添加服务</a>
 
   </ion-content>
