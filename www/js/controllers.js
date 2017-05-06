@@ -20,7 +20,7 @@ function ($scope, $stateParams, $rootScope, MyState) {
 
   $scope.$on('$ionicNavView.leave', function () {
     MyState.set('from', 'STORE');
-    MyState.set('card', {title: '提问', imgSrc: 'img/text.png', avatarBgColor: '#ff894f', hint: '输入问题'});
+    MyState.set('card', _.cloneDeep({title: '提问', imgSrc: 'img/text.png', avatarBgColor: '#ff894f', hint: '输入问题'}));
   });
 
 }])
