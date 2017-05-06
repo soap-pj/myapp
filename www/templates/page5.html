@@ -8,7 +8,7 @@
   <ion-content padding="true" class="has-header">
 
     <my-card value="card" ng-repeat="card in cards" ></my-card>
-    <a ui-sref="tabsController.page6" id="page5-button2" class="button button-positive  button-block">添加服务</a>
+    <a ng-click="addService()" ui-sref="tabsController.page6" id="page5-button2" class="button button-positive  button-block">添加服务</a>
 
   </ion-content>
 </ion-view>
