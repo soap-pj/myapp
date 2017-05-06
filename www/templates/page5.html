@@ -1,85 +1,14 @@
 <ion-view title="创建彩云砖" id="page5">
   <ion-nav-buttons side="left" class="has-header">
-    <button class="button button-icon icon ion-ios-play"></button>
+    <button class="button button-icon icon ion-ios-play" ng-click="run_service()"></button>
   </ion-nav-buttons>
   <ion-nav-buttons side="right" class="has-header">
     <button class="button button-icon icon ion-android-done"></button>
   </ion-nav-buttons>
   <ion-content padding="true" class="has-header">
-    <div class="list card" id="page5-card23">
-      <ion-item class="item-avatar" id="page5-list-item19">
-      <img src="img/text.png">
-        <h2>提问</h2>
-      </ion-item>
-      <div class="item item-body" id="page5-list-item-container12">
-        <form id="page5-form8" class="list">
-          <label class="item item-input" id="page5-input1">
-            <span class="input-label">输入问题</span>
-            <input type="text" placeholder="">
-          </label>
-        </form>
-      </div>
-    </div>
-    <div class="list card" id="page5-card21">
-      <ion-item class="item-avatar" id="page5-list-item15">
-        <img src="img/douban.png">
-        <h2>豆瓣电影评分</h2>
-      </ion-item>
-      <div class="item item-body" id="page5-list-item-container3">
-        <div id="page5-markdown4" class="show-list-numbers-and-dots">
-          <p style="margin-top:0px;color:#000000;">从豆瓣得到电影信息
-          </p>
-        </div>
-      </div>
-      <form id="page5-form5" class="list">
-        <label class="item item-select" id="page5-select3">
-          <span class="input-label">选择信息关键词</span>
-          <select>
-            <option>评分</option>
-            <option></option>
-          </select>
-        </label>
-      </form>
-    </div>
-    <div class="list card" id="page5-card25">
-      <ion-item class="item-avatar" id="page5-list-item23">
-      <img src="img/maoyan.png">
-        <h2>猫眼电影评分</h2>
-      </ion-item>
-      <div class="item item-body" id="page5-list-item-container7">
-        <div id="page5-markdown8" class="show-list-numbers-and-dots">
-          <p style="margin-top:0px;color:#000000;">从豆瓣得到电影信息
-          </p>
-        </div>
-      </div>
-      <form id="page5-form6" class="list">
-        <label class="item item-select" id="page5-select4">
-          <span class="input-label">选择信息关键词</span>
-          <select>
-            <option>评分</option>
-            <option></option>
-          </select>
-        </label>
-      </form>
-    </div>
-    <div class="list card" id="page5-card28">
-      <ion-item class="item-avatar" id="page5-list-item29">
-      <img src="img/star.png">
-        <h2>计算</h2>
-      </ion-item>
-         <form id="page5-form6" class="list">
-        <label class="item item-select">
-          <span class="input-label">请选择计算公式</span>
-          <select>
-            <option>平均值</option>
-            <option>众数</option>
-            <option>中位数</option>
-            <option>方差</option>
-            <option>标准差</option>
-          </select>
-        </label>
-      </form>
-    </div>
+
+    <my-card value="card" ng-repeat="card in cards" ></my-card>
     <a ui-sref="tabsController.page6" id="page5-button2" class="button button-positive  button-block">添加服务</a>
+
   </ion-content>
 </ion-view>

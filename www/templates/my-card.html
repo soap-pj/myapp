@@ -1,0 +1,26 @@
+<div class="list card" id="page5-card21">
+  <ion-item class="item-avatar" id="page5-list-item15" ng-style="{'background-color': '{{$ctrl.value.avatarBgColor}}'}">
+    <img ng-src="{{$ctrl.value.imgSrc}}">
+    <h2>{{ $ctrl.value.title }}</h2>
+  </ion-item>
+  <div ng-if="$ctrl.value.description!==undefined" class="item item-body" id="page5-list-item-container3">
+    <div id="page5-markdown4" class="show-list-numbers-and-dots">
+      <p style="margin-top:0px;color:#000000;">
+        {{ $ctrl.value.description }}
+      </p>
+    </div>
+  </div>
+
+
+  <div ng-class="$ctrl.value.choices===undefined?'item item-body':''">
+  <form id="page5-form5" class="list">
+    <label class="item" ng-class="$ctrl.value.choices===undefined ?'item-input':'item-select'" id="page5-select3">
+      <span class="input-label">{{ $ctrl.value.hint}}</span>
+      <select ng-if="$ctrl.value.choices !== undefined">
+        <option ng-repeat="choice in $ctrl.value.choices"> {{choice}}</option>
+      </select>
+      <input ng-if="$ctrl.value.choices === undefined" type="text" placeholder="">
+    </label>
+  </form>
+</div>
+</div>
