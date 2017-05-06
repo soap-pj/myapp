@@ -151,35 +151,34 @@ h2{
 /////////////////////////////////////////////////
 
 #page5{
-	.card:nth-child(5n+1){
-		.item-avatar{
-			background-color:$orange;
-		}
-	}
-	.card:nth-child(5n+2){
-		.item-avatar{
-			background-color:$blue;
-		}
-	}
-	.card:nth-child(5n+3){
-		.item-avatar{
-			background-color:$mint;
-		}
-	}
-	.card:nth-child(5n+4){
-		.item-avatar{
-			background-color:$dark;
-		}
-	}
-	.card:nth-child(5n){
-		.item-avatar{
-			background-color:$purple;
-		}
-	}
 
 	input{
 		border-bottom: solid 0.5px #ccc;
 	}
+
+	span:not(.input-label){
+		float: right;
+	}
+}
+
+b{
+	display: inline-block;
+    width: 16px;
+    height: 2px;
+    background: #fff;
+    font-size: 0;
+    line-height: 0;
+    vertical-align: middle;
+    -webkit-transform: rotate(45deg);
+}
+
+b:after{
+	content: '.';
+    display: block;
+    width: 16px;
+    height: 2px;
+    background: #fff;
+    -webkit-transform: rotate(-90deg);
 }
 
 strong{
