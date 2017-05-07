@@ -9822,16 +9822,15 @@ h2 {
   border-radius: 8px;
   height: 245px;
   margin: 5%;
-  padding: 9%;
   vertical-align: middle; }
-  .item-thumbnail-left div {
+  .item-thumbnail-left .imgdiv {
     width: 100%;
     height: 20%;
     background-color: transparent;
     display: table-cell;
     text-align: center;
     vertical-align: middle; }
-    .item-thumbnail-left div img {
+    .item-thumbnail-left .imgdiv img {
       position: initial;
       max-height: 50px !important;
       max-width: 50px !important; }
@@ -9843,19 +9842,23 @@ h2 {
     margin: 20px 0 0 0;
     padding: 0; }
 
-.item-thumbnail-left:nth-child(5n+1) {
+.item-content {
+  padding: 9% !important;
+  height: 100%; }
+
+.item-thumbnail-left:nth-child(5n+1) .item-content {
   background-color: #62E5A4; }
 
-.item-thumbnail-left:nth-child(5n+2) {
+.item-thumbnail-left:nth-child(5n+2) .item-content {
   background-color: #433D77; }
 
-.item-thumbnail-left:nth-child(5n+3) {
+.item-thumbnail-left:nth-child(5n+3) .item-content {
   background-color: #ff894f; }
 
-.item-thumbnail-left:nth-child(5n+4) {
+.item-thumbnail-left:nth-child(5n+4) .item-content {
   background-color: #1F2024; }
 
-.item-thumbnail-left:nth-child(5n) {
+.item-thumbnail-left:nth-child(5n) .item-content {
   background-color: #003466; }
 
 #page6 .item-avatar {
