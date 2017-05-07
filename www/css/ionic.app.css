@@ -9859,9 +9859,13 @@ h2 {
   background-color: #003466; }
 
 #page6 .item-avatar {
+<<<<<<< Updated upstream
   width: 50.25%;
+=======
+  width: 50%;
+>>>>>>> Stashed changes
   height: 180px;
-  margin: 0 -2px;
+  margin: 0;
   border: none;
   padding: 5%;
   display: inline-block;
@@ -9872,11 +9876,21 @@ h2 {
     min-width: 60px;
     min-height: 60px; }
 
+#page6 .row {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 5px; }
+
 #page6 .small {
   width: 25%;
   height: 100px;
   background-color: rgba(0, 0, 0, 0.5);
+<<<<<<< Updated upstream
   margin: 0 -1.48px; }
+=======
+  margin: 0;
+  border-left: solid 1px #fff; }
+>>>>>>> Stashed changes
   #page6 .small img {
     min-width: 20px;
     min-height: 20px;
@@ -9887,16 +9901,19 @@ h2 {
     font-size: 83%;
     margin: 2px 0; }
 
-#page6 .item-avatar:not(.small):nth-child(5n) {
+#page6 .small:nth-child(1) {
+  border-left: none; }
+
+#page6 .row:nth-child(2) .item-avatar:not(.small):nth-child(1) {
   background-color: #003466; }
 
-#page6 .item-avatar:not(.small):nth-child(5n+1) {
+#page6 .row:nth-child(2) .item-avatar:not(.small):nth-child(2) {
   background-color: #62E5A4; }
 
-#page6 .item-avatar:not(.small):nth-child(5n+2) {
+#page6 .row:nth-child(3) .item-avatar:not(.small):nth-child(1) {
   background-color: #433D77; }
 
-#page6 .item-avatar:not(.small):nth-child(5n+3) {
+#page6 .row:nth-child(3) .item-avatar:not(.small):nth-child(2) {
   background-color: #ff894f; }
 
 #page6 .item-avatar:not(.small):nth-child(5n+4) {

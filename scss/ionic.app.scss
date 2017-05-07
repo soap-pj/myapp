@@ -49,13 +49,13 @@ h2{
 		height: 20%;
 		background-color: rgba(0,0,0,0);
 		display: table-cell; 
-        text-align:center; 
-        vertical-align:middle;
+		text-align:center; 
+		vertical-align:middle;
 
 		img{
 			position: initial;
-		    max-height: 50px !important;
-		    max-width: 50px !important;
+			max-height: 50px !important;
+			max-width: 50px !important;
 		}
 	}	
 
@@ -91,36 +91,42 @@ h2{
 /////////////////////////////////////////////////
 #page6{
 	.item-avatar{
-		width: 50.5%;
+		width: 50%;
 		height: 180px;
-	    margin: 0 -2px;
-	    border: none;
-	    padding: 5%;
-    	display: inline-block;
-    	text-align: center;
+		margin: 0;
+		border: none;
+		padding: 5%;
+		display: inline-block;
+		text-align: center;
 
-    	img{
+		img{
 			position: static;
 			margin: 20px 0;
-		    min-width: 60px;
-		    min-height: 60px;
+			min-width: 60px;
+			min-height: 60px;
 		}
 		
 	}
 	
+	.row{
+		margin: 0;
+		padding: 0;
+		margin-bottom: 5px;
+	}
 
 	.small{
 		width:25%;
 		height: 100px;
 		background-color: rgba(0,0,0,0.5);
-		margin: 0 -1.5px;
+		margin: 0;
+		border-left: solid 1px #fff;
 
 		img{
 			min-width: 20px;
-		    min-height: 20px;
-		    margin: 0;
-		    border-radius: 0;
-		    -webkit-filter:invert(1);
+			min-height: 20px;
+			margin: 0;
+			border-radius: 0;
+			-webkit-filter:invert(1);
 		}
 		h2{
 			font-size: 83%;
@@ -128,17 +134,24 @@ h2{
 		}
 	}
 
-	.item-avatar:not(.small):nth-child(5n){
-		background-color:$blue;
+	.small:nth-child(1){
+		border-left: none;
 	}
-	.item-avatar:not(.small):nth-child(5n+1){
-		background-color:$mint;
+	.row:nth-child(2){
+		.item-avatar:not(.small):nth-child(1){
+			background-color:$blue;
+		}
+		.item-avatar:not(.small):nth-child(2){
+			background-color:$mint;
+		}
 	}
-	.item-avatar:not(.small):nth-child(5n+2){
-		background-color:$purple;
-	}
-	.item-avatar:not(.small):nth-child(5n+3){
-		background-color:$orange;
+	.row:nth-child(3){
+		.item-avatar:not(.small):nth-child(1){
+			background-color:$purple;
+		}
+		.item-avatar:not(.small):nth-child(2){
+			background-color:$orange;
+		}
 	}
 	.item-avatar:not(.small):nth-child(5n+4){
 		background-color:$dark;
@@ -163,25 +176,25 @@ h2{
 
 b{
 	display: inline-block;
-    width: 16px;
-    height: 2px;
-    background: #fff;
-    font-size: 0;
-    line-height: 0;
-    vertical-align: middle;
-    -webkit-transform: rotate(45deg);
+	width: 16px;
+	height: 2px;
+	background: #fff;
+	font-size: 0;
+	line-height: 0;
+	vertical-align: middle;
+	-webkit-transform: rotate(45deg);
 }
 
 b:after{
 	content: '.';
-    display: block;
-    width: 16px;
-    height: 2px;
-    background: #fff;
-    -webkit-transform: rotate(-90deg);
+	display: block;
+	width: 16px;
+	height: 2px;
+	background: #fff;
+	-webkit-transform: rotate(-90deg);
 }
 
 strong{
-	    float: right;
+	float: right;
 }
 
