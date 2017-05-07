@@ -7,7 +7,7 @@
   </ion-nav-buttons>
   <ion-content padding="true" class="has-header">
 
-    <my-card value="card" ng-repeat="card in cards" ></my-card>
+    <my-card value="card" ng-repeat="card in cards track by $index" ></my-card>
 
     <!--TODO: below is just a test for soap result, please delete it after validation -->
     <ul ng-if="testSoapResult !== undefined">

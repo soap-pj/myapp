@@ -38,6 +38,7 @@ function ($scope, $stateParams, $rootScope, MyState) {
 
 
   $scope.$on('$ionicView.enter', function () {
+    // console.log(JSON.stringify(MyState.get('card')));
     if (MyState.get('beingAddingService') === true && MyState.get('from') === 'STORE') {
       $scope.cards.push(MyState.get('card'));
       MyState.set('beingAddingService', false);
