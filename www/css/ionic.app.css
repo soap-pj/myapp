@@ -9859,11 +9859,7 @@ h2 {
   background-color: #003466; }
 
 #page6 .item-avatar {
-<<<<<<< Updated upstream
-  width: 50.25%;
-=======
   width: 50%;
->>>>>>> Stashed changes
   height: 180px;
   margin: 0;
   border: none;
@@ -9876,6 +9872,11 @@ h2 {
     min-width: 60px;
     min-height: 60px; }
 
+#page6 .item-avatar.active,
+#page6 .item-avatar.activated {
+  box-shadow: none;
+  opacity: 0.7; }
+
 #page6 .row {
   margin: 0;
   padding: 0;
@@ -9885,12 +9886,8 @@ h2 {
   width: 25%;
   height: 100px;
   background-color: rgba(0, 0, 0, 0.5);
-<<<<<<< Updated upstream
-  margin: 0 -1.48px; }
-=======
   margin: 0;
   border-left: solid 1px #fff; }
->>>>>>> Stashed changes
   #page6 .small img {
     min-width: 20px;
     min-height: 20px;
