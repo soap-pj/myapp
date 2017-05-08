@@ -9847,7 +9847,7 @@ h2 {
   height: 100%; }
 
 my-service:nth-child(6n+1) .item-thumbnail-left .item-content {
-  background-color: #62E5A4; }
+  background-color: #70D8A4; }
 
 my-service:nth-child(6n+2) .item-thumbnail-left .item-content {
   background-color: #433D77; }
@@ -9910,7 +9910,7 @@ my-service:nth-child(6n) .item-thumbnail-left .item-content {
   background-color: #003466; }
 
 #page6 .row:nth-child(3n-1) my-grid:nth-child(2) .item-avatar:not(.small) {
-  background-color: #62E5A4; }
+  background-color: #70D8A4; }
 
 #page6 .row:nth-child(3n) my-grid:nth-child(1) .item-avatar:not(.small) {
   background-color: #433D77; }
