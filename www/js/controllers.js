@@ -81,7 +81,10 @@ function ($scope, $stateParams, $rootScope, MyState) {
       $scope.testSoapResult = _.map(places, (p) => {return p.name;});
 
     });
-  }
+  };
+
+  //TODO: just test weather, should be delete
+  $scope.run_service = MyState.weather;
 
 }])
  
