@@ -57,7 +57,35 @@ angular.module('app.services', [])
 
       {title: '豆瓣电影评分', custom: true, imgSrc: 'img/douban.png', avatarBgColor: '#003466', description: '从豆瓣得到电影信息', hint: '选择信息关键词', choices: ['评分', '影片名称', '上映时间']},
       {title: '猫眼电影评分', custom: true, imgSrc: 'img/maoyan.png', avatarBgColor: '#62E5A4', description: '从猫眼得到电影信息', hint: '选择信息关键词', choices: ['评分', '影片名称', '上映时间']},
-
+      // {title: '天气服务', custom: true,
+      //   run: function (location, ) {
+      //     var UID = "U5AEA3EC21";
+      //     var KEY = "6mln4t78urchujjg";
+      //     var API = "http://api.seniverse.com/v3/weather/now.json"; // 获取天气实况
+      //     var LOCATION = location // 除拼音外，还可以使用 v3 id、汉语等形式
+      //     // 获取当前时间戳
+      //     var ts = Math.floor((new Date()).getTime() / 1000);
+      //     // 构造验证参数字符串
+      //     var str = "ts=" + ts + "&uid=" + UID;
+      //     // 使用 HMAC-SHA1 方式，以 API 密钥（key）对上一步生成的参数字符串（raw）进行加密
+      //     // 并将加密结果用 base64 编码，并做一个 urlencode，得到签名 sig
+      //     var sig = CryptoJS.HmacSHA1(str, KEY).toString(CryptoJS.enc.Base64);
+      //     sig = encodeURIComponent(sig);
+      //     str = str + "&sig=" + sig;
+      //     // 构造最终请求的 url
+      //     var url = API + "?location=" + LOCATION + "&" + str + "&callback=foo";
+      //     // 直接发送请求进行调用，手动处理回调函数
+      //     $.getJSON(url, function(data) {
+      //       var obj = document.getElementById('content');
+      //       var weather = data.results[0];
+      //       var text = [];
+      //       text.push("Location: " + weather.location.path);
+      //       text.push("Weather: " + weather.now.text);
+      //       text.push("Temperature: " + weather.now.temperature);
+      //       obj.innerText = text.join("\n");
+      //     });
+      //   }
+      // },
     {title: 'IP定位', custom: true, imgSrc: 'img/pin.png', avatarBgColor: '#003466', hint: '输入问题'},
     {title: '美食推荐', custom: true, imgSrc: 'img/food2.png', avatarBgColor: '#003466', hint: '输入问题'},
     {title: '美食评分', custom: true, imgSrc: 'img/star.png', avatarBgColor: '#003466', hint: '输入问题'},
