@@ -22,11 +22,31 @@ function ($scope, $stateParams, $rootScope, MyState) {
 
   $scope.$on('$ionicNavView.leave', function () {
     MyState.set('from', 'STORE');
-    MyState.set('card', _.cloneDeep(MyState.cards[$scope.current_card_index]));
-    if ($scope.current_card_index + 1 <= MyState.cards.length-1) {
+    MyState.set('card', _.cloneDeep(MyState.bricks[$scope.current_card_index]));
+    if ($scope.current_card_index + 1 <= MyState.bricks.length-1) {
       $scope.current_card_index += 1;
     }
   });
+
+  $scope.grids = MyState.bricks;
+
+  $scope.systemGrids = _.filter($scope.grids, (grid) => {return grid.custom === false});
+
+  // console.log($scope.systemGrids);
+
+  $scope.customGrids = _.filter($scope.grids, (grid) => {return grid.custom === true});
+
+
+  $scope.getRowNumberOfCustomGrids = function () {
+    return _.range(Math.floor($scope.customGrids.length / 2));
+  };
+
+  $scope.getGridsOfCurrentRow = function (i) {
+    return _.slice($scope.grids, 2*i, 2*i + 2);
+  };
+
+
+
 
 }])
    
@@ -57,7 +77,7 @@ function ($scope, $stateParams, $rootScope, MyState) {
 
   $scope.run_service = function () {
     //TODO: it's just a test, please re-implement it
-    MyState.cards[0].run().then(function (places) {
+    MyState.bricks[0].run().then(function (places) {
       $scope.testSoapResult = _.map(places, (p) => {return p.name;});
 
     });

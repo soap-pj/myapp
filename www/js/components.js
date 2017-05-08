@@ -7,3 +7,10 @@ angular.module('app.components', [])
   controller: function MyCardController () {
   }
 })
+.component('myGrid', {
+  templateUrl: 'templates/my-grid.html',
+  bindings: {value: '<'},
+  controller: function MyGridController () {
+
+  }
+})
