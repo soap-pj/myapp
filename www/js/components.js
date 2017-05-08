@@ -19,9 +19,12 @@ angular.module('app.components', [])
     let that = this;
     this.addToCardsOfCreatingPage = function () {
       if (Mystate.get('from') === 'MAKE' && Mystate.get('beingAddingService') === true) {
-        let index = _.findIndex(Mystate.bricks, function (card) {
-          return card.id === that.value.id
+        let index = _.findIndex(Mystate.bricks, function (brick) {
+          return brick.id === that.value.id
         });
+        console.log(Mystate.get('from'));
+        console.log(Mystate.get('beingAddingService'));
+        console.log(index);
         if (index !== -1) {
           Mystate.cardsOfCreatingPage.push(_.cloneDeep(Mystate.bricks[index]));
         }

@@ -125,6 +125,12 @@ angular.module('app.services', [])
       this.cardsOfCreatingPage.splice(index, 1);
     };
 
+    this.clearCardsOfCreatingPage = function () {
+      while(this.cardsOfCreatingPage.length > 0) {
+        this.cardsOfCreatingPage.pop();
+      }
+    }
+
 
 
 }]);

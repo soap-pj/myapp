@@ -46,6 +46,8 @@ function ($scope, $stateParams, $rootScope, MyState, $state, $ionicPopup) {
     MyState.set('from', 'MAKE');
     MyState.set('beingAddingService', true);
     $state.go('tabsController.page6');
+    console.log(MyState.get('from'));
+    console.log(MyState.get('beingAddingService'));
   };
 
   $scope.run_service = function () {
@@ -74,8 +76,8 @@ function ($scope, $stateParams, $rootScope, MyState, $state, $ionicPopup) {
       promptPopup.then(function(res) {
         if (res !== undefined && res !== null) {
           let idForNewService = _.max(_.map(MyState.myServices, function (service) {return service.id})) + 1;
-          MyState.myServices.push({id: idForNewService, description: res});
-          $scope.cards = [];
+          MyState.myServices.push({id: idForNewService, description: res, imgSrc: 'img/design.png'});
+          MyState.clearCardsOfCreatingPage();
           $state.go('tabsController.page2');
         }
       });
