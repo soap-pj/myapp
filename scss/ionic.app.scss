@@ -26,8 +26,9 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 $orange: #ff894f;
 $dark:   #1F2024;
 $purple: #433D77;
-$blue:   #003466;
+$navy:   #003466;
 $mint:   #62E5A4;
+$blue:	 #00A6FB;
 $white:  #fff;
 
 h2{
@@ -75,106 +76,139 @@ h2{
 	padding: 9% !important;
 	height: 100%;
 }
-.item-thumbnail-left:nth-child(5n+1){
+.item-thumbnail-left:nth-child(6n+1){
 	.item-content{
 		background-color: $mint;
 	}	
 }
-.item-thumbnail-left:nth-child(5n+2){
+.item-thumbnail-left:nth-child(6n+2){
 	.item-content{
 		background-color: $purple;
 	}	
 }
-.item-thumbnail-left:nth-child(5n+3){
+.item-thumbnail-left:nth-child(6n+3){
 	.item-content{
 		background-color: $orange;
 	}	
 }
-.item-thumbnail-left:nth-child(5n+4){
+.item-thumbnail-left:nth-child(6n+4){
 	.item-content{
 		background-color: $dark;
 	}	
 }
-.item-thumbnail-left:nth-child(5n){
+.item-thumbnail-left:nth-child(6n+5){
 	.item-content{
 		background-color: $blue;
+	}	
+}
+.item-thumbnail-left:nth-child(6n){
+	.item-content{
+		background-color: $navy;
 	}	
 }
 
 ////////////////////page6.html
 /////////////////////////////////////////////////
 #page6{
-	.item-avatar{
-		width: 50%;
-		height: 180px;
-		margin: 0;
-		border: none;
-		padding: 5%;
-		display: inline-block;
-		text-align: center;
-
-		img{
-			position: static;
-			margin: 20px 0;
-			min-width: 60px;
-			min-height: 60px;
-		}
-		
-	}
-	
-	.item-avatar.active,
-  	.item-avatar.activated {
-	    box-shadow: none;
-	    opacity: 0.7;
-	}
 
 	.row{
 		margin: 0;
 		padding: 0;
 		margin-bottom: 5px;
+
+		my-grid{
+			border-left: solid 1px #fff;
+			padding: 0;
+
+			.item-avatar{
+				width: 100%;
+				height: 180px;
+				margin: 0;
+				border: none;
+				padding: 5%;
+				display: inline-block;
+				text-align: center;
+
+				img{
+					position: static;
+					margin: 20px 0;
+					min-width: 60px;
+					min-height: 60px;
+				}
+				
+			}
+			
+			.item-avatar.active,
+		  	.item-avatar.activated {
+			    box-shadow: none;
+			    opacity: 0.7;
+			}
+
+			.small{
+				width: 100%;
+				height: 100px;
+				background-color: rgba(0,0,0,0.5);
+				margin: 0;
+
+				img{
+					min-width: 20px;
+					min-height: 20px;
+					margin: 0;
+					border-radius: 0;
+				}
+				h2{
+					font-size: 83%;
+					margin: 2px 0;
+				}
+
+			}
+		}
 	}
 
-	.small{
-		width:25%;
-		height: 100px;
-		background-color: rgba(0,0,0,0.5);
-		margin: 0;
-		border-left: solid 1px #fff;
 
-		img{
-			min-width: 20px;
-			min-height: 20px;
-			margin: 0;
-			border-radius: 0;
-			-webkit-filter:invert(1);
-		}
-		h2{
-			font-size: 83%;
-			margin: 2px 0;
-		}
-	}
-
-	.small:nth-child(1){
+	my-grid:nth-child(1){
 		border-left: none;
 	}
-	.row:nth-child(2){
-		.item-avatar:not(.small):nth-child(1){
-			background-color:$blue;
+
+	.row:nth-child(3n-1){
+		my-grid:nth-child(1){
+			.item-avatar:not(.small){
+				background-color:$navy;
+			}
 		}
-		.item-avatar:not(.small):nth-child(2){
-			background-color:$mint;
-		}
-	}
-	.row:nth-child(3){
-		.item-avatar:not(.small):nth-child(1){
-			background-color:$purple;
-		}
-		.item-avatar:not(.small):nth-child(2){
-			background-color:$orange;
+		
+		my-grid:nth-child(2){
+			.item-avatar:not(.small){
+				background-color:$mint;
+			}
 		}
 	}
-	.item-avatar:not(.small):nth-child(5n+4){
-		background-color:$dark;
+
+	.row:nth-child(3n){
+		my-grid:nth-child(1){
+			.item-avatar:not(.small){
+				background-color:$purple;
+			}
+		}
+		my-grid:nth-child(2){
+			.item-avatar:not(.small){
+				background-color:$orange;
+			}
+		}
+
+	}
+	.row:nth-child(3n+1){
+		my-grid:nth-child(1){
+			.item-avatar:not(.small){
+				background-color:$dark;
+			}
+		}
+		my-grid:nth-child(2){
+			.item-avatar:not(.small){
+				background-color:$blue;
+			}
+		}
+
 	}
 
 }

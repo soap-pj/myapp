@@ -1,16 +1,16 @@
 <ion-view title="彩云砖商店" id="page6">
-  <ion-content padding="false" class="has-header">
-    <ion-list id="page6-list2">
-    <div class="row">
-    <my-grid value="grid" ng-repeat="grid in systemGrids track by $index" ></my-grid>
-    </div>
+<ion-content padding="false" class="has-header">
+<ion-list id="page6-list2">
+<div class="row">
+  <my-grid class="col" value="grid" ng-repeat="grid in systemGrids track by $index" ></my-grid>
+</div>
 
-      <div class="row" ng-repeat="i in getRowNumberOfCustomGrids() track by $index">
-        <my-grid ng-repeat="grid in getGridsOfCurrentRow(i)"></my-grid>
-      </div>
+<div class="row" ng-repeat="i in getRowNumberOfCustomGrids() track by $index">
+  <my-grid class="col-50" ng-repeat="grid in getGridsOfCurrentRow(i)"></my-grid>
+</div>
 
-      <my-grid ng-if="customGrids.length % 2 !== 0" value="customGrids[customGrids.length-1]"></my-grid>
+<!-- <my-grid ng-if="customGrids.length % 2 !== 0" value="customGrids[customGrids.length-1]"></my-grid> -->
 
-    </ion-list>
-  </ion-content>
+</ion-list>
+</ion-content>
 </ion-view>
