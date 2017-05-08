@@ -38,7 +38,7 @@ angular.module('app.services', [])
 
 
     this.bricks = [
-      {title: '提问', custom: false, imgSrc: 'img/text.png', avatarBgColor: '#ff894f', hint: '输入问题',
+      {id: 1, title: '提问', custom: false, imgSrc: 'img/text.png', avatarBgColor: '#ff894f', hint: '输入问题',
         run: function () {
           return $soap.post(SOAP_ADDR, 'getLocation', {query: '电影院', region: '上海',num: 5}).then(
             function (places) {
@@ -48,20 +48,20 @@ angular.module('app.services', [])
         }
       },
 
-      {title: '提问', custom: false, imgSrc: 'img/question.png', avatarBgColor: '#003466', hint: '输入问题'},
+      {id: 2, title: '提问', custom: false, imgSrc: 'img/question.png', avatarBgColor: '#003466', hint: '输入问题'},
         // {title: '计算', custom: false, imgSrc: 'img/calculator.png', avatarBgColor: '#003466', hint: '输入问题'},
-      {title: '计算', custom: false, imgSrc: 'img/calculator.png', avatarBgColor: '#1F2024', hint: '请选择计算公式', choices: ['平均值', '众数', '中位数', '方差', '标准差']},
+      {id: 3, title: '计算', custom: false, imgSrc: 'img/calculator.png', avatarBgColor: '#1F2024', hint: '请选择计算公式', choices: ['平均值', '众数', '中位数', '方差', '标准差']},
         {title: '发送邮件', custom: false, imgSrc: 'img/email.png', avatarBgColor: '#003466', hint: '输入问题'},
-        {title: '输入文字', custom: false, imgSrc: 'img/text2.png', avatarBgColor: '#003466', hint: '输入问题'},
+        {title: '输入文字', custom: false, imgSrc: 'img/text.png', avatarBgColor: '#003466', hint: '输入问题'},
 
 
-      {title: '豆瓣电影评分', custom: true, imgSrc: 'img/douban.png', avatarBgColor: '#003466', description: '从豆瓣得到电影信息', hint: '选择信息关键词', choices: ['评分', '影片名称', '上映时间']},
-      {title: '猫眼电影评分', custom: true, imgSrc: 'img/maoyan.png', avatarBgColor: '#62E5A4', description: '从猫眼得到电影信息', hint: '选择信息关键词', choices: ['评分', '影片名称', '上映时间']},
+      {id:4, title: '豆瓣电影评分', custom: true, imgSrc: 'img/douban.png', avatarBgColor: '#003466', description: '从豆瓣得到电影信息', hint: '选择信息关键词', choices: ['评分', '影片名称', '上映时间']},
+      {id: 5, title: '猫眼电影评分', custom: true, imgSrc: 'img/maoyan.png', avatarBgColor: '#62E5A4', description: '从猫眼得到电影信息', hint: '选择信息关键词', choices: ['评分', '影片名称', '上映时间']},
       // {title: '天气服务', custom: true,
       // },
-    {title: 'IP定位', custom: true, imgSrc: 'img/pin.png', avatarBgColor: '#003466', hint: '输入问题'},
-    {title: '美食推荐', custom: true, imgSrc: 'img/food2.png', avatarBgColor: '#003466', hint: '输入问题'},
-    {title: '美食评分', custom: true, imgSrc: 'img/star.png', avatarBgColor: '#003466', hint: '输入问题'},
+    {id:6, title: 'IP定位', custom: true, imgSrc: 'img/pin.png', avatarBgColor: '#003466', hint: '输入问题'},
+    {id:7, title: '美食推荐', custom: true, imgSrc: 'img/food2.png', avatarBgColor: '#003466', hint: '输入问题'},
+    {id:8, title: '美食评分', custom: true, imgSrc: 'img/star.png', avatarBgColor: '#003466', hint: '输入问题'},
 
 
     ];
@@ -107,8 +107,24 @@ angular.module('app.services', [])
 
 
     this.myServices = [
-      {imgSrc: 'img/film.png', description: '输入电影名，查询它在豆瓣和猫眼上的综合评分'},
-      {imgSrc: 'img/food.png', description: '根据IP地址推荐附近美食，并显示评分'}
+      {id: 1, imgSrc: 'img/film.png', description: '输入电影名，查询它在豆瓣和猫眼上的综合评分'},
+      {id: 2, imgSrc: 'img/food.png', description: '根据IP地址推荐附近美食，并显示评分'}
     ];
+
+
+    this.deleteService = function (id) {
+     let index = _.findIndex(this.myServices, function(o) { return o.id === id; });
+    this.myServices.splice(index, 1);
+   };
+
+
+
+    this.cardsOfCreatingPage = [];
+    this.deleteCardOfCreatingPage = function (id) {
+      let index = _.findIndex(this.cardsOfCreatingPage, function(o) { return o.id === id; });
+      this.cardsOfCreatingPage.splice(index, 1);
+    };
+
+
 
 }]);

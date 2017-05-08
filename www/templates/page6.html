@@ -6,7 +6,7 @@
 </div>
 
 <div class="row" ng-repeat="i in getRowNumberOfCustomGrids() track by $index">
-  <my-grid class="col-50" ng-repeat="grid in getGridsOfCurrentRow(i)"></my-grid>
+  <my-grid class="col-50" value= "grid" ng-repeat="grid in getGridsOfCurrentRow(i)"></my-grid>
 </div>
 
 <!-- <my-grid ng-if="customGrids.length % 2 !== 0" value="customGrids[customGrids.length-1]"></my-grid> -->

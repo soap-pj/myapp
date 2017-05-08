@@ -3,7 +3,7 @@
     <button class="button button-icon icon ion-ios-play" ng-click="run_service()"></button>
   </ion-nav-buttons>
   <ion-nav-buttons side="right" class="has-header">
-    <button class="button button-icon icon ion-android-done"></button>
+    <button class="button button-icon icon ion-android-done" ng-click="save_service()"></button>
   </ion-nav-buttons>
   <ion-content padding="true" class="has-header">
 
@@ -14,7 +14,7 @@
       <li ng-repeat="result in testSoapResult">{{ result }}</li>
     </ul>
 
-    <a ng-click="addService()" ui-sref="tabsController.page6" id="page5-button2" class="button button-positive  button-block">添加服务</a>
-
+    <a ng-click="addService()"  id="page5-button2" class="button button-positive  button-block">添加服务</a>
+    <!--ui-sref="tabsController.page6"-->
   </ion-content>
 </ion-view>
