@@ -9949,3 +9949,8 @@ b:after {
 
 strong {
   float: right; }
+
+.popup-container .popup {
+  border-radius: 5px;
+  background-color: white;
+}

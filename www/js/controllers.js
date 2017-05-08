@@ -8,9 +8,6 @@ angular.module('app.controllers', [])
 function ($scope, $stateParams, $rootScope, MyState) {
   $scope.services = MyState.myServices;
 
-
-
-
 }])
 
 .controller('page6Ctrl', ['$scope', '$stateParams', '$rootScope', 'MyState', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
@@ -19,13 +16,8 @@ function ($scope, $stateParams, $rootScope, MyState) {
 function ($scope, $stateParams, $rootScope, MyState) {
   $scope.current_card_index = 0;
 
-
-
   $scope.grids = MyState.bricks;
-
   $scope.systemGrids = _.filter($scope.grids, (grid) => {return grid.custom === false});
-
-
   $scope.customGrids = _.filter($scope.grids, (grid) => {return grid.custom === true});
 
 
@@ -41,10 +33,10 @@ function ($scope, $stateParams, $rootScope, MyState) {
 
 }])
    
-.controller('page5Ctrl', ['$scope', '$stateParams', '$rootScope', 'MyState', '$state', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
+.controller('page5Ctrl', ['$scope', '$stateParams', '$rootScope', 'MyState', '$state', '$ionicPopup', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams, $rootScope, MyState, $state) {
+function ($scope, $stateParams, $rootScope, MyState, $state, $ionicPopup) {
   $scope.cards = MyState.cardsOfCreatingPage;
 
 
@@ -69,6 +61,24 @@ function ($scope, $stateParams, $rootScope, MyState, $state) {
 
 
   $scope.save_service = function () {
+
+
+      var promptPopup = $ionicPopup.prompt({
+        title: '保存彩云砖',
+        // template: '保存彩云砖',
+        inputType: 'text',
+        inputPlaceholder: '请输入彩云砖名称',
+        // cssClass: 'prompt-popup'
+      });
+
+      promptPopup.then(function(res) {
+        if (res !== undefined && res !== null) {
+          let idForNewService = _.max(_.map(MyState.myServices, function (service) {return service.id})) + 1;
+          MyState.myServices.push({id: idForNewService, description: res});
+          $scope.cards = [];
+          $state.go('tabsController.page2');
+        }
+      });
 
   };
 }])
