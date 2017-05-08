@@ -33,10 +33,10 @@ function ($scope, $stateParams, $rootScope, MyState) {
 
 }])
    
-.controller('page5Ctrl', ['$scope', '$stateParams', '$rootScope', 'MyState', '$state', '$ionicPopup', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
+.controller('page5Ctrl', ['$scope', '$stateParams', '$rootScope', 'MyState', '$state', '$ionicPopup', '$ionicScrollDelegate', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams, $rootScope, MyState, $state, $ionicPopup) {
+function ($scope, $stateParams, $rootScope, MyState, $state, $ionicPopup, $ionicScrollDelegate) {
   $scope.cards = MyState.cardsOfCreatingPage;
 
 
@@ -59,7 +59,9 @@ function ($scope, $stateParams, $rootScope, MyState, $state, $ionicPopup) {
   };
 
   //TODO: just test weather, should be delete
-  $scope.run_service = MyState.weather;
+  $scope.run_service = function () {
+    $ionicScrollDelegate.scrollBottom();
+  };
 
 
   $scope.save_service = function () {
