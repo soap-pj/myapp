@@ -13,7 +13,7 @@
   </div>
 
 
-  <div ng-class="$ctrl.value.choices===undefined?'item item-body':''">
+  <div ng-if="$ctrl.value.hint !== undefined" ng-class="$ctrl.value.choices===undefined?'item item-body':''">
     <form class="list">
       <label class="item" ng-class="$ctrl.value.choices===undefined ?'item-input':'item-select'">
         <span class="input-label">{{ $ctrl.value.hint}}</span>

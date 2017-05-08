@@ -47,8 +47,8 @@ angular.module('app.services', [])
           );
         }
       },
-
-      {id: 2, title: '提问', custom: false, imgSrc: 'img/question.png', avatarBgColor: '#003466', hint: '输入问题'},
+      //
+      // {id: 2, title: '提问', custom: false, imgSrc: 'img/question.png', avatarBgColor: '#003466', hint: '输入问题'},
         // {title: '计算', custom: false, imgSrc: 'img/calculator.png', avatarBgColor: '#003466', hint: '输入问题'},
       {id: 3, title: '计算', custom: false, imgSrc: 'img/calculator.png', avatarBgColor: '#1F2024', hint: '请选择计算公式', choices: ['平均值', '众数', '中位数', '方差', '标准差']},
         {title: '发送邮件', custom: false, imgSrc: 'img/email.png', avatarBgColor: '#003466', hint: '输入问题'},
@@ -57,11 +57,10 @@ angular.module('app.services', [])
 
       {id:4, title: '豆瓣电影评分', custom: true, imgSrc: 'img/douban.png', avatarBgColor: '#003466', description: '从豆瓣得到电影信息', hint: '选择信息关键词', choices: ['评分', '影片名称', '上映时间']},
       {id: 5, title: '猫眼电影评分', custom: true, imgSrc: 'img/maoyan.png', avatarBgColor: '#62E5A4', description: '从猫眼得到电影信息', hint: '选择信息关键词', choices: ['评分', '影片名称', '上映时间']},
-      // {title: '天气服务', custom: true,
-      // },
-    {id:6, title: 'IP定位', custom: true, imgSrc: 'img/pin.png', avatarBgColor: '#003466', hint: '输入问题'},
-    {id:7, title: '美食推荐', custom: true, imgSrc: 'img/food2.png', avatarBgColor: '#003466', hint: '输入问题'},
-    {id:8, title: '美食评分', custom: true, imgSrc: 'img/star.png', avatarBgColor: '#003466', hint: '输入问题'},
+      {id: 6, title: '天气服务', custom: true, imgSrc: 'img/weather.png', avatarBgColor: '#62E5A4', description: '获取当前天气', hint: '输入地点'},
+    {id:7, title: 'IP定位', custom: true, imgSrc: 'img/pin.png', avatarBgColor: '#003466', description: '通过 IP 获取当前位置'},
+    {id:8, title: '美食推荐', custom: true, imgSrc: 'img/food2.png', avatarBgColor: '#003466', hint: '输入问题'},
+    {id:9, title: '美食评分', custom: true, imgSrc: 'img/star.png', avatarBgColor: '#003466', hint: '输入问题'},
 
 
     ];
