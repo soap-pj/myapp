@@ -90,17 +90,6 @@ angular.module('app.services', [])
         str = str + "&sig=" + sig;
         // 构造最终请求的 url
         var url = API + "?location=" + LOCATION + "&" + str;
-        // 直接发送请求进行调用，手动处理回调函数
-        // $.getJSON(url, function(data) {
-        //   // var obj = document.getElementById('content');
-        //   var weather = data.results[0];
-        //   var text = [];
-        //   text.push("Location: " + weather.location.path);
-        //   text.push("Weather: " + weather.now.text);
-        //   text.push("Temperature: " + weather.now.temperature);
-        //   return text;
-        //   // obj.innerText = text.join("\n");
-        // });
 
         $http.get(url).then(function (response) {
           let data = response.data;
@@ -112,6 +101,14 @@ angular.module('app.services', [])
           return result;
         });
 
-    }
+    };
+
+
+
+
+    this.myServices = [
+      {imgSrc: 'img/film.png', description: '输入电影名，查询它在豆瓣和猫眼上的综合评分'},
+      {imgSrc: 'img/food.png', description: '根据IP地址推荐附近美食，并显示评分'}
+    ];
 
 }]);

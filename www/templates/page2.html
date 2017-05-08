@@ -1,22 +1,10 @@
 <ion-view title="我的彩云砖" id="page2">
   <ion-content padding="true" class="has-header">
     <ion-list id="page2-list1">
-      <ion-item class="item-thumbnail-left" id="page2-list-item5">
 
-      <div class="imgdiv">
-      <img src="img/film.png">
-      </div>
-        
-        <h2>输入电影名，查询它在豆瓣和猫眼上的综合评分</h2>  
-        <ion-option-button class="button-assertive">删除</ion-option-button>      
-      </ion-item>
-      <ion-item class="item-thumbnail-left" id="page2-list-item6">
-      <div class="imgdiv">
-        <img src="img/food.png">
-      </div>
-        <h2>根据IP地址推荐附近美食，并显示评分</h2>
-        <ion-option-button class="button-assertive">删除</ion-option-button>     
-      </ion-item>
+
+      <my-service value="service" ng-repeat="service in services track by $index" ></my-service>
+
     </ion-list>
   </ion-content>
 </ion-view>

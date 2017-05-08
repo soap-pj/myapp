@@ -1,4 +1,4 @@
-"use strict"
+'use strict'
 
 angular.module('app.components', [])
 .component('myCard', {
@@ -11,6 +11,13 @@ angular.module('app.components', [])
   templateUrl: 'templates/my-grid.html',
   bindings: {value: '<'},
   controller: function MyGridController () {
+
+  }
+})
+.component('myService', {
+  templateUrl: 'templates/my-service.html',
+  bindings: {value: '<'},
+  controller: function MyServiceController () {
 
   }
 })
